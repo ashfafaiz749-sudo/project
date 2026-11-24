@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip | AirRite Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">AirRite Travels</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="destination.html">Destinations</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-page">
+
+        <div class="booking-heading">
+            <h1>Book Your Dream Trip</h1>
+            <p>Fill in your details and plan your next journey with us.</p>
+        </div>
+
+        <div class="booking-container">
+
+            <form id="bookingForm">
+
+                <h2>Travel Booking Form</h2>
+
+                <div class="booking-grid">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email"
+                               placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone"
+                               placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <select name="destination" required>
+                            <option value="">Select Destination</option>
+                            <option>Shimla & Manali</option>
+                            <option>Kenya Safari</option>
+                            <option>Explore Phu Quoc</option>
+                            <option>Sky High in Turkey</option>
+                            <option>Best of Vietnam</option>
+                            <option>Turkey Grand Tour</option>
+                            <option>Kerala Tour</option>
+                            <option>Adventure Azerbaijan</option>
+                            <option>Vietnam Grand Tour</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Travel Date</label>
+                        <input type="date" name="travelDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Travellers</label>
+                        <input type="number" name="travellers"
+                               min="1" max="50"
+                               placeholder="Number of people" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adults</label>
+                        <input type="number" name="adults"
+                               min="1" placeholder="Number of adults">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Children</label>
+                        <input type="number" name="children"
+                               min="0" placeholder="Number of children">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Message</label>
+                    <textarea name="message" rows="5"
+                        placeholder="Write your requirements here..."></textarea>
+                </div>
+
+                <button type="submit" class="booking-submit">
+                    SEND BOOKING REQUEST
+                </button>
+
+                <p id="bookingMessage"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 AirRite Travels. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("bookingMessage").textContent =
+                "Form is ready. Please connect an email or booking service to send your request.";
+
+        });
+    </script>
+
+</body>
+</html>
